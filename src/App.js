@@ -1,26 +1,43 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Greet from './Greet'
+import Counter from './Counter'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Counter
+        initialValue={10}
+        changeBy={2}
+      />
+      <Counter
+        initialValue={99}
+        changeBy={33}
+      />
+      <Counter
+        initialValue={-5}
+        changeBy={8}
+      />
+      <Greet
+        whom="Cthulu"
+        how="Salutations"
+      />
+      <Greet
+        whom="Doctor Who"
+        how="Allo"
+
+      />
+      <Greet
+        whom="You"
+        how="Hey"
+        color="blue"
+      />
     </div>
   );
 }
 
 export default App;
+
+
+Greet("Cathulu")
